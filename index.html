@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="start">
+	<h1 class="text-center">Где ты хочешь оказаца?</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="animal col-2">
+				<img style="height: 300px; width: 200px;" src="animal.jpg">
+				<p>С жевотными</p>
+			</div>
+			<div class="col-2"></div>
+			<div class="pepe col-2">
+				<img style="height: 200px; width: 300px;" src="pepe.png">
+				<p>Грустить с Пепе</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h1 style="display: none;" class="mscore">ОЧКИ:</h1><h1 class="lscore" style="display: none;"><output name="score" class="score">100</output></h1>
+
+	<div class="card1" style="background-image: url(img/Antilop.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; display: none;"></div>
+	<div class="card2" style="background-image: url(img/begemot.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 305px; display: none;"></div>
+	<div class="card3" style="background-image: url(img/elephant.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 610px; display: none;"></div>
+	<div class="col-4 card4" style="background-image: url(img/giena.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 915px; display: none;"></div>
+	<div class="col-4 card5" style="background-image: url(img/jiraf.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 1220px; display: none;"></div>
+	<div class="col-4 card6" style="background-image: url(img/korova.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-top: 210px; display: none;"></div>
+	<div class="col-4 card7" style="background-image: url(img/lion.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 1220px; margin-top: 210px; display: none;"></div>
+	<div class="col-4 card8" style="background-image: url(img/nosorog.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 420px; margin-top: 420px; display: none;"></div>
+	<div class="col-4 card9" style="background-image: url(img/zebra.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 730px; margin-top: 420px; display: none;"></div>
+
+
+<div class="vopros" style="display: none; margin-left: 600px; margin-top: 150px; position: absolute;">
+	<img src="img/eleph.png" style="height: 200px; width: 300px;">
+	<h2 style="">Где спрятан слон?</h2>
+</div> 
+
+<h1 style="display: none;" class="mscore2">ОЧКИ:</h1><h1 class="lscore2" style="display: none;"><output name="score2" class="score2">100</output></h1>
+
+	<div class="card2_1" style="background-image: url(img1/card1.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute;display: none;"></div>
+	<div class="card2_2" style="background-image: url(img1/card2.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 305px; display: none;"></div>
+	<div class="card2_3" style="background-image: url(img1/card3jpg.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 610px; display: none;"></div>
+	<div class="col-4 card2_4" style="background-image: url(img1/card4.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 915px; display: none;"></div>
+	<div class="col-4 card2_5" style="background-image: url(img1/card5.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 1220px; display: none;"></div>
+	<div class="col-4 card2_6" style="background-image: url(img1/card6.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-top: 210px; display: none;"></div>
+	<div class="col-4 card2_7" style="background-image: url(img1/card7.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 1220px; margin-top: 210px; display: none;"></div>
+	<div class="col-4 card2_8" style="background-image: url(img1/card8.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 420px; margin-top: 420px; display: none;"></div>
+	<div class="col-4 card2_9" style="background-image: url(img1/card9.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 730px; margin-top: 420px; display: none;"></div>
+
+
+<div class="vopros2" style="display: none; margin-left: 600px; margin-top: 230px; position: absolute;">
+	<h2 style="" class="">Where original Pepe?</h2>
+</div>
+
+
+
+<script>
+	let score = 100
+	let timer = function(){
+		document.querySelector(".vopros").style.display = "block";
+		document.querySelector(".card1").style.background = "black";
+		document.querySelector(".card2").style.background = "black";
+		document.querySelector(".card3").style.background = "black";
+		document.querySelector(".card4").style.background = "black";
+		document.querySelector(".card5").style.background = "black";
+		document.querySelector(".card6").style.background = "black";
+		document.querySelector(".card7").style.background = "black";
+		document.querySelector(".card8").style.background = "black";
+		document.querySelector(".card9").style.background = "black";
+	}
+	let score2 = 100
+	let timer2 = function(){
+		document.querySelector(".vopros2").style.display = "block";
+		document.querySelector(".card2_1").style.background = "black";
+		document.querySelector(".card2_2").style.background = "black";
+		document.querySelector(".card2_3").style.background = "black";
+		document.querySelector(".card2_4").style.background = "black";
+		document.querySelector(".card2_5").style.background = "black";
+		document.querySelector(".card2_6").style.background = "black";
+		document.querySelector(".card2_7").style.background = "black";
+		document.querySelector(".card2_8").style.background = "black";
+		document.querySelector(".card2_9").style.background = "black";
+	}
+
+	document.querySelector(".animal").onclick = function(){
+		document.querySelector(".mscore").style.display = "block";
+		document.querySelector(".lscore").style.display = "block";
+		document.querySelector(".card1").style.display = "block";
+		document.querySelector(".card2").style.display = "block";
+		document.querySelector(".card3").style.display = "block";
+		document.querySelector(".card4").style.display = "block";
+		document.querySelector(".card5").style.display = "block";
+		document.querySelector(".card6").style.display = "block";
+		document.querySelector(".card7").style.display = "block";
+		document.querySelector(".card8").style.display = "block";
+		document.querySelector(".card9").style.display = "block";
+		document.querySelector(".start").style.display = "none";
+		setTimeout(timer,2000);
+	}
+	document.querySelector(".pepe").onclick = function(){
+		document.querySelector(".mscore2").style.display = "block";
+		document.querySelector(".lscore2").style.display = "block";
+		document.querySelector(".card2_1").style.display = "block";
+		document.querySelector(".card2_2").style.display = "block";
+		document.querySelector(".card2_3").style.display = "block";
+		document.querySelector(".card2_4").style.display = "block";
+		document.querySelector(".card2_5").style.display = "block";
+		document.querySelector(".card2_6").style.display = "block";
+		document.querySelector(".card2_7").style.display = "block";
+		document.querySelector(".card2_8").style.display = "block";
+		document.querySelector(".card2_9").style.display = "block";
+		document.querySelector(".start").style.display = "none";
+		setTimeout(timer2,2000);
+	}
+
+	document.querySelector(".card1").onclick = function(){
+		document.querySelector(".card1").style.backgroundImage = "url(img/Antilop.jpg)";
+		document.querySelector(".card1").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card2").onclick = function(){
+		document.querySelector(".card2").style.backgroundImage = "url(img/begemot.jpg)";
+		document.querySelector(".card2").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card3").onclick = function(){
+		document.querySelector(".card1").style.backgroundImage = "url(img/Antilop.jpg)";
+		document.querySelector(".card1").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2").style.backgroundImage = "url(img/begemot.jpg)";
+		document.querySelector(".card2").style.backgroundSize = "100% 100%";
+		document.querySelector(".card3").style.backgroundImage = "url(img/elephant.jpg)";
+		document.querySelector(".card3").style.backgroundSize = "100% 100%";
+		document.querySelector(".card4").style.backgroundImage = "url(img/giena.jpg)";
+		document.querySelector(".card4").style.backgroundSize = "100% 100%";
+		document.querySelector(".card5").style.backgroundImage = "url(img/jiraf.jpg)";
+		document.querySelector(".card5").style.backgroundSize = "100% 100%";
+		document.querySelector(".card6").style.backgroundImage = "url(img/korova.jpg)";
+		document.querySelector(".card6").style.backgroundSize = "100% 100%";
+		document.querySelector(".card7").style.backgroundImage = "url(img/lion.jpg)";
+		document.querySelector(".card7").style.backgroundSize = "100% 100%";
+		document.querySelector(".card8").style.backgroundImage = "url(img/nosorog.jpg)";
+		document.querySelector(".card8").style.backgroundSize = "100% 100%";
+		document.querySelector(".card9").style.backgroundImage = "url(img/zebra.jpg)";
+		document.querySelector(".card9").style.backgroundSize = "100% 100%";
+		score = score + 100;
+		document.querySelector(".score").innerHTML = score;
+		document.querySelector(".vopros").style.display = "none";
+	}
+	document.querySelector(".card4").onclick = function(){
+		document.querySelector(".card4").style.backgroundImage = "url(img/giena.jpg)";
+		document.querySelector(".card4").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card5").onclick = function(){
+		document.querySelector(".card5").style.backgroundImage = "url(img/jiraf.jpg)";
+		document.querySelector(".card5").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card6").onclick = function(){
+		document.querySelector(".card6").style.backgroundImage = "url(img/korova.jpg)";
+		document.querySelector(".card6").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card7").onclick = function(){
+		document.querySelector(".card7").style.backgroundImage = "url(img/lion.jpg)";
+		document.querySelector(".card7").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card8").onclick = function(){
+		document.querySelector(".card8").style.backgroundImage = "url(img/nosorog.jpg)";
+		document.querySelector(".card8").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	document.querySelector(".card9").onclick = function(){
+		document.querySelector(".card9").style.backgroundImage = "url(img/zebra.jpg)";
+		document.querySelector(".card9").style.backgroundSize = "100% 100%";
+		score = score - 10;
+		document.querySelector(".score").innerHTML = score;
+	}
+	
+	document.querySelector(".card2_1").onclick = function(){
+		document.querySelector(".card2_1").style.backgroundImage = "url(img1/card1.jpg)";
+		document.querySelector(".card2_1").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_2").onclick = function(){
+		document.querySelector(".card2_2").style.backgroundImage = "url(img1/card2.jpg)";
+		document.querySelector(".card2_2").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_3").onclick = function(){
+		document.querySelector(".card2_3").style.backgroundImage = "url(img1/card3jpg.jpg)";
+		document.querySelector(".card2_3").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_4").onclick = function(){
+		document.querySelector(".card2_4").style.backgroundImage = "url(img1/card4.jpg)";
+		document.querySelector(".card2_4").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_5").onclick = function(){
+		document.querySelector(".card2_5").style.backgroundImage = "url(img1/card5.jpg)";
+		document.querySelector(".card2_5").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_6").onclick = function(){
+		document.querySelector(".card2_1").style.backgroundImage = "url(img1/card1.jpg)";
+		document.querySelector(".card2_1").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_2").style.backgroundImage = "url(img1/card2.jpg)";
+		document.querySelector(".card2_2").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_3").style.backgroundImage = "url(img1/card3jpg.jpg)";
+		document.querySelector(".card2_3").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_4").style.backgroundImage = "url(img1/card4.jpg)";
+		document.querySelector(".card2_4").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_5").style.backgroundImage = "url(img1/card5.jpg)";
+		document.querySelector(".card2_5").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_6").style.backgroundImage = "url(img1/card6.jpg)";
+		document.querySelector(".card2_6").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_7").style.backgroundImage = "url(img1/card7.jpg)";
+		document.querySelector(".card2_7").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_8").style.backgroundImage = "url(img1/card8.jpg)";
+		document.querySelector(".card2_8").style.backgroundSize = "100% 100%";
+		document.querySelector(".card2_9").style.backgroundImage = "url(img1/card9.jpg)";
+		document.querySelector(".card2_9").style.backgroundSize = "100% 100%";
+		score2 = score2 + 100;
+		document.querySelector(".score2").innerHTML = score2;
+		document.querySelector(".vopros2").style.display = "none";
+	}
+	document.querySelector(".card2_7").onclick = function(){
+		document.querySelector(".card2_7").style.backgroundImage = "url(img1/card7.jpg)";
+		document.querySelector(".card2_7").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_8").onclick = function(){
+		document.querySelector(".card2_8").style.backgroundImage = "url(img1/card8.jpg)";
+		document.querySelector(".card2_8").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+	document.querySelector(".card2_9").onclick = function(){
+		document.querySelector(".card2_9").style.backgroundImage = "url(img1/card9.jpg)";
+		document.querySelector(".card2_9").style.backgroundSize = "100% 100%";
+		score2 = score2 - 10;
+		document.querySelector(".score2").innerHTML = score2;
+	}
+
+	//setTimeout(timer2,2000);
+
+</script>	
+</body>
+</html>
